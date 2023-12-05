@@ -1,17 +1,23 @@
 import express from "express";
 import cors from "cors";
+import fs from "fs";
+import https from "https";
 import { json } from "body-parser";
 import { config } from "dotenv";
 import { UserEntry } from "./types/UserEntry.type";
 import { API_ROUTES } from "./utils/routes";
 import { mockedUsers } from "./mocks/mockedUsers";
+import { validateApiKey } from "./utils/helpers";
+import { createSecureServer } from "./utils/secureServer";
 
 config();
 
+const port = process.env.SERVER_PORT;
+
 const app = express();
-const port = 4000;
 
 app.use(cors());
+app.use(validateApiKey);
 app.use(json());
 
 const consentsArray: UserEntry[] = mockedUsers;
@@ -26,6 +32,8 @@ app.get(API_ROUTES.getConsents, (req, res) => {
   res.status(200).json(consentsArray);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+const server = createSecureServer(app);
+
+server.listen(port, () => {
+  console.log(`Server is running on https://localhost:${port}`);
 });
