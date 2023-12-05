@@ -28,8 +28,15 @@ npm test
 
 # Screenshots
 
+Initial Screen
 ![Screenshot](screenshots/001.png)
+
+One user input is valid
 ![Screenshot](screenshots/002.png)
+
+Consents Table
 ![Screenshot](screenshots/003.png)
+
+Another screenshot of Consents Table
 ![Screenshot](screenshots/004.png)
 
