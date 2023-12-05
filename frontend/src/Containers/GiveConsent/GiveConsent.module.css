@@ -1,0 +1,44 @@
+.container {
+  text-align: center;
+
+  .inputs {
+    display: flex;
+    justify-content: center;
+  }
+  .inputArea {
+    width: 40%;
+    margin: 0px 4px;
+    height: 20px;
+  }
+
+  .text {
+    margin: 0px auto;
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  .checkboxes {
+    text-align: left;
+    border: 1px solid black;
+
+    .row {
+      padding: 4px;
+    }
+  }
+
+  .submitButtonDisabled {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+  }
+
+  .submitButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+  }
+}
