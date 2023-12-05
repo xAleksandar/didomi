@@ -31,7 +31,7 @@ npm test
 Initial Screen
 ![Screenshot](screenshots/001.png)
 
-One user input is valid
+Once user input is valid
 ![Screenshot](screenshots/002.png)
 
 Consents Table
