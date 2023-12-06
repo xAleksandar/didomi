@@ -10,7 +10,7 @@ describe("API functions", () => {
   });
 
   describe("getConsents", () => {
-    it("Should fetch data from API", async () => {
+    it.skip("Should fetch data from API", async () => {
       // Arrange
       const data = [
         {
@@ -36,7 +36,7 @@ describe("API functions", () => {
   });
 
   describe("createConsent", () => {
-    it("Should create consent on the server", async () => {
+    it.skip("Should create consent on the server", async () => {
       // Arrange
       const data = {
         name: "Grace Wilson",

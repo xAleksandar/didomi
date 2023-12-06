@@ -7,6 +7,7 @@ import { manageAgreementCheck } from "../../lib/helpers";
 import { createConsent } from "../../lib/api/consents";
 import { UserEntry } from "../../types/UserEntry.type";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
+import EmailForm from "../../Components/Forms/EmailForm";
 import styles from "./GiveConsent.module.css";
 
 const GiveConsent = () => {
@@ -52,22 +53,23 @@ const GiveConsent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.inputs}>
-        <input
-          className={styles.inputArea}
-          type="text"
-          placeholder="Name"
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-        <input
-          className={styles.inputArea}
-          type="text"
-          placeholder="Email address"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
+        <div className={styles.inputArea}>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Name"
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+        </div>
+        <div className={styles.inputArea}>
+          <EmailForm
+            onSubmit={(email: string) => {
+              setEmail(email);
+            }}
+          />
+        </div>
       </div>
       <div className={styles.text}>{lang.commonAggreement}:</div>
       <div className={styles.checkboxes}>

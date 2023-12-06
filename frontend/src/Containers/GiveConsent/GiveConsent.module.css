@@ -4,11 +4,14 @@
   .inputs {
     display: flex;
     justify-content: center;
+    background-attachment: red;
   }
   .inputArea {
-    width: 40%;
     margin: 0px 4px;
-    height: 20px;
+
+    .input {
+      height: 20px;
+    }
   }
 
   .text {
