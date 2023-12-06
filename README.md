@@ -2,6 +2,13 @@
 
 Features React Frontend and NodeJS server as Backend. Task is built on Node v20.0.0.
 
+# Features
+
+Encrypted HTTPs communication.
+API_KEY protected server calls.
+Email Form validation.
+More.
+
 # Setup
 
 In server directory, rename sample.env to env.
